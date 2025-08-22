@@ -15,8 +15,7 @@ public class Movimentação : MonoBehaviour
     private float moveInput;
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        
+        rb = GetComponent<Rigidbody2D>();        
     }
 
     
