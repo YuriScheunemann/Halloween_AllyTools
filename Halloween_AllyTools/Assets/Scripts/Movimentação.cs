@@ -16,14 +16,15 @@ public class Movimentação : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Movimentacao();
-        Jump();
+        
     }
 
     
     void Update()
     {
         moveInput = Input.GetAxis("Horizontal");
+        Movimentacao();
+        Jump();
     }
 
     void Movimentacao ()
@@ -45,7 +46,7 @@ public class Movimentação : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            rb.AddForceY(jumpForce * 300);
         }
     }
 
