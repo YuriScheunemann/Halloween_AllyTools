@@ -10,14 +10,15 @@ public class Zombie_Hability : MonoBehaviour
         troca = FindObjectOfType(typeof(Troca_Personagens)) as Troca_Personagens;
 
     }
-      
+
     void Update()
     {
-        if (troca.zombie_player == null)
+        if (troca == null || troca.zombie_player == null)
         {
             return;
-        }   
-        if (Input.GetKeyDown(KeyCode.E) && troca.zombie_player != null)
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Hability();
         }
