@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Troca_Personagens : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Troca_Personagens : MonoBehaviour
     public GameObject Lobisomen_Object;
     public GameObject Zombie_Object;
     public GameObject Human_Object;
-    public GameObject Personagens;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.B))
@@ -55,5 +56,13 @@ public class Troca_Personagens : MonoBehaviour
         Lobisomen_Object.SetActive(lobsomen_player);
         Zombie_Object.SetActive(zombie_player);
         Human_Object.SetActive(human_player);
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
     }
 }

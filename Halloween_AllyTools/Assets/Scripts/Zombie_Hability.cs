@@ -13,10 +13,10 @@ public class Zombie_Hability : MonoBehaviour
         troca = FindObjectOfType(typeof(Troca_Personagens)) as Troca_Personagens;
 
     }
-      
+
     void Update()
     {
-        if (!troca.Zombie_Object.activeSelf)
+        if (troca.zombie_player == null)
         {
             return;
         }   
@@ -32,7 +32,7 @@ public class Zombie_Hability : MonoBehaviour
 
         if (colisor != null && ponto_Teleporte != null && troca.Zombie_Object.activeSelf)
         {
-            troca.Personagens.transform.position = buraco_Teleporte.position;
+            troca.Zombie_Object.transform.position = ponto_Teleporte.position;
         }
         
         if (buraco_Teleporte != null && troca.Zombie_Object.activeSelf)
