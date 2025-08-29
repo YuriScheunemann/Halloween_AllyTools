@@ -293,6 +293,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9142097589579322616, guid: 72ec8f62e29633642930b0991933786b, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -376,13 +380,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9142097589579322616, guid: 72ec8f62e29633642930b0991933786b, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5885194114498490329, guid: 72ec8f62e29633642930b0991933786b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 390256787}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72ec8f62e29633642930b0991933786b, type: 3}
 --- !u!1 &390256781 stripped
 GameObject:
@@ -394,22 +399,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3505580420717194246, guid: 72ec8f62e29633642930b0991933786b, type: 3}
   m_PrefabInstance: {fileID: 390256780}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &390256787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390256781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff33b301f240960489d3c5121f32cad1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buraco:
-    serializedVersion: 2
-    m_Bits: 128
-  ponto_Teleporte: {fileID: 1957827885}
 --- !u!1 &491954154
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,11 +543,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3505580420717194246, guid: 72ec8f62e29633642930b0991933786b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.39999998
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 3505580420717194246, guid: 72ec8f62e29633642930b0991933786b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06999993
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3505580420717194246, guid: 72ec8f62e29633642930b0991933786b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -596,6 +585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human
       objectReference: {fileID: 0}
+    - target: {fileID: 9142097589579322616, guid: 72ec8f62e29633642930b0991933786b, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -624,6 +617,7 @@ GameObject:
   - component: {fileID: 792433418}
   - component: {fileID: 792433417}
   - component: {fileID: 792433420}
+  - component: {fileID: 792433421}
   m_Layer: 0
   m_Name: Personagens
   m_TagString: Untagged
@@ -762,6 +756,23 @@ AreaEffector2D:
   m_ForceTarget: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &792433421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792433415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff33b301f240960489d3c5121f32cad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buraco:
+    serializedVersion: 2
+    m_Bits: 128
+  ponto_Teleporte: {fileID: 1957827885}
+  buraco_Teleporte: {fileID: 1486885421}
 --- !u!1 &1253355402
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,6 +808,7 @@ MonoBehaviour:
   Lobisomen_Object: {fileID: 361629634}
   Zombie_Object: {fileID: 390256781}
   Human_Object: {fileID: 525340270}
+  Personagens: {fileID: 792433415}
 --- !u!4 &1253355404
 Transform:
   m_ObjectHideFlags: 0
@@ -860,7 +872,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -958,7 +970,7 @@ GameObject:
   - component: {fileID: 1957827884}
   - component: {fileID: 1957827883}
   m_Layer: 7
-  m_Name: Buraco
+  m_Name: Buraco(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -994,7 +1006,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
