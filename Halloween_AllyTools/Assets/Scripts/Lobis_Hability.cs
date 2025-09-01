@@ -26,6 +26,6 @@ public class Lobis_Hability : MonoBehaviour
 
     void Hability()
     {
-
+        Collider2D colisor = Physics2D.OverlapCircle(troca.Personagens_Object.transform.position, 0.1f, destruivel);
     }
 }
