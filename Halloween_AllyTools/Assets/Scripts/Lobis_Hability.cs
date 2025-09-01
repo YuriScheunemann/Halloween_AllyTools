@@ -14,6 +14,18 @@ public class Lobis_Hability : MonoBehaviour
    
     void Update()
     {
-        
+        if (!troca.Lobisomen_Object.activeSelf)
+        {
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.E) && troca.Lobisomen_Object.activeSelf)
+        {
+            Hability();
+        }
+    }
+
+    void Hability()
+    {
+
     }
 }
