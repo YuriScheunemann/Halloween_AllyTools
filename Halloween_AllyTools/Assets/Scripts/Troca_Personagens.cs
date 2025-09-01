@@ -10,7 +10,7 @@ public class Troca_Personagens : MonoBehaviour
     public GameObject Lobisomen_Object;
     public GameObject Zombie_Object;
     public GameObject Human_Object;
-    public GameObject Personagens;
+    public GameObject Personagens_Object;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.B))

@@ -16,7 +16,7 @@ public class Zombie_Hability : MonoBehaviour
 
     void Update()
     {
-        if (troca.zombie_player == null)
+        if (!troca.Zombie_Object.activeSelf)
         {
             return;
         }   
@@ -28,16 +28,16 @@ public class Zombie_Hability : MonoBehaviour
     
     void Hability()
     {    
-        Collider2D colisor = Physics2D.OverlapCircle(troca.Personagens.transform.position, 0.1f, buraco);
+        Collider2D colisor = Physics2D.OverlapCircle(troca.Personagens_Object.transform.position, 0.1f, buraco);
 
         if (colisor != null && ponto_Teleporte != null && troca.Zombie_Object.activeSelf)
         {
-            troca.Zombie_Object.transform.position = ponto_Teleporte.position;
+            troca.Personagens_Object.transform.position = buraco_Teleporte.position;
         }
         
-        if (buraco_Teleporte != null && troca.Zombie_Object.activeSelf)
+        if (colisor != null && buraco_Teleporte != null && troca.Zombie_Object.activeSelf)
         {           
-            troca.Personagens.transform.position = ponto_Teleporte.position;
+            troca.Personagens_Object.transform.position = ponto_Teleporte.position;
         }        
     }
    

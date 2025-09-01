@@ -808,7 +808,7 @@ MonoBehaviour:
   Lobisomen_Object: {fileID: 361629634}
   Zombie_Object: {fileID: 390256781}
   Human_Object: {fileID: 525340270}
-  Personagens: {fileID: 792433415}
+  Personagens_Object: {fileID: 792433415}
 --- !u!4 &1253355404
 Transform:
   m_ObjectHideFlags: 0
