@@ -15,11 +15,7 @@ public class Zombie_Hability : MonoBehaviour
     }
 
     void Update()
-    {
-        if (!troca.Zombie_Object.activeSelf)
-        {
-            return;
-        }   
+    {        
         if (Input.GetKeyDown(KeyCode.E) && troca.Zombie_Object.activeSelf)
         {
             Hability();

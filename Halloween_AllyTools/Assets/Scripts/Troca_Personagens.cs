@@ -58,11 +58,5 @@ public class Troca_Personagens : MonoBehaviour
         Human_Object.SetActive(human_player);
     }
 
-    void PlaySound(AudioClip clip)
-    {
-        if (audioSource != null && clip != null)
-        {
-            audioSource.PlayOneShot(clip);
-        }
-    }
+   
 }
