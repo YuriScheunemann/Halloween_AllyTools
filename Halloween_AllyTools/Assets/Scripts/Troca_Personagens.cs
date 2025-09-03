@@ -13,15 +13,15 @@ public class Troca_Personagens : MonoBehaviour
     public GameObject Personagens_Object;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             SwapLobi();
         }
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             SwapZombie();
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             SwapHuman();
         }
