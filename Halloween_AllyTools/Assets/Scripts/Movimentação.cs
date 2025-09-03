@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -7,27 +8,20 @@ using UnityEngine;
 public class Movimentação : MonoBehaviour
 
 {
-
+    Troca_Personagens troca;
     public float moveSpeed = 3f;
-
     public float jumpForce = 1f;
-
     private Rigidbody2D rb;
-
     private bool IsGrounded;
-
     public Transform groundCheck;
-
     public float groundCheckRadius = 0.1f;
-
     public LayerMask groundLayer;
-
     private float moveInput;
 
     void Start()
 
     {
-
+        troca = FindObjectOfType(typeof(Troca_Personagens)) as Troca_Personagens;
         rb = GetComponent<Rigidbody2D>();
 
     }
@@ -37,11 +31,8 @@ public class Movimentação : MonoBehaviour
     void Update()
 
     {
-
         moveInput = Input.GetAxis("Horizontal");
-
         Movimentacao();
-
         Jump();
 
     }
@@ -52,20 +43,61 @@ public class Movimentação : MonoBehaviour
 
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
-        if (moveInput > 0)
-
+        if (troca.Human_Object.activeSelf)
         {
+            if (moveInput > 0)
 
-            transform.localScale = new Vector3(1, 1, 1);
+            {
+                transform.localScale = new Vector3(6, (float)3.8, 1);
+            }
 
+            else if (moveInput < 0)
+
+            {
+                transform.localScale = new Vector3(-6, (float)3.8, 1);
+            }
         }
-
-        else if (moveInput < 0)
-
+        if (troca.Lobisomen_Object.activeSelf)
         {
+            if (moveInput > 0)
 
-            transform.localScale = new Vector3(-1, 1, 1);
+            {
+                transform.localScale = new Vector3(3, (float)1.73913, 1);
+            }
 
+            else if (moveInput < 0)
+
+            {
+                transform.localScale = new Vector3(-3, (float)1.73913, 1);
+            }
+        }
+        if (troca.Zombie_Object.activeSelf)
+        {
+            if (moveInput > 0)
+
+            {
+                transform.localScale = new Vector3((float)4.5, (float)2.608696, 1);
+            }
+
+            else if (moveInput < 0)
+
+            {
+                transform.localScale = new Vector3((float)-4.5 , (float)2.608696, 1);
+            }
+        }
+        if (troca.Personagens_Object.activeSelf)
+        {
+            if (moveInput > 0)
+
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+
+            else if (moveInput < 0)
+
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
         }
 
     }
