@@ -16,7 +16,7 @@ TagManager:
   - player
   - Buraco
   - destruivel
-  - 
+  - voids
   - 
   - 
   - 
@@ -40,6 +40,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3010895781
+    locked: 0
+  - name: ground
+    uniqueID: 1821901923
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

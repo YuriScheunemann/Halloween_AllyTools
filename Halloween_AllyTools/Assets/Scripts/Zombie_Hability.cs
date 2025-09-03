@@ -1,5 +1,3 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Zombie_Hability : MonoBehaviour
@@ -35,11 +33,7 @@ public class Zombie_Hability : MonoBehaviour
 
     void Hability()
     {
-        Collider2D colisor = Physics2D.OverlapCircle(
-            troca.Personagens_Object.transform.position,
-            0.1f,
-            buraco
-        );
+        Collider2D colisor = Physics2D.OverlapCircle(troca.Personagens_Object.transform.position,0.1f,buraco);
 
         if (colisor != null && ponto_Teleporte != null && troca.Zombie_Object.activeSelf)
         {
