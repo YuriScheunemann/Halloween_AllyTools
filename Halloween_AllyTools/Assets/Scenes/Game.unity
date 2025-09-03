@@ -304,7 +304,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6146018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,7 +446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &291656217
 Animator:
   serializedVersion: 7
@@ -565,7 +565,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &291656221
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -651,7 +651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &307340730
 Animator:
   serializedVersion: 7
@@ -770,7 +770,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &307340734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -805,7 +805,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.067941666, y: -0.0764344}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -815,7 +815,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 0.6071937, y: 0.89594597}
   m_EdgeRadius: 0
 --- !u!114 &307340735
 MonoBehaviour:
@@ -1761,10 +1761,10 @@ MonoBehaviour:
   lobsomen_player: 0
   zombie_player: 0
   human_player: 1
-  Lobisomen_Object: {fileID: 0}
-  Zombie_Object: {fileID: 0}
-  Human_Object: {fileID: 0}
-  Personagens_Object: {fileID: 0}
+  Lobisomen_Object: {fileID: 307340729}
+  Zombie_Object: {fileID: 291656216}
+  Human_Object: {fileID: 6146011}
+  Personagens_Object: {fileID: 2024757398}
 --- !u!1 &1870006808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7975539314658179448, guid: 6e98c21d0b3398a4680317951ce1f8e9, type: 3}
