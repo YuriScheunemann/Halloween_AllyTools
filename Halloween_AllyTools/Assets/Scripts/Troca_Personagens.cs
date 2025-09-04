@@ -56,7 +56,5 @@ public class Troca_Personagens : MonoBehaviour
         Lobisomen_Object.SetActive(lobsomen_player);
         Zombie_Object.SetActive(zombie_player);
         Human_Object.SetActive(human_player);
-    }
-
-   
+    }   
 }

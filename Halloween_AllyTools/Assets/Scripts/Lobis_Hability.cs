@@ -1,10 +1,9 @@
-using System.Diagnostics;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Lobis_Hability : MonoBehaviour
 {
-    public LayerMask destruivel;
-    public GameObject Objeto_dest;
+    public LayerMask destruivel;   
     Troca_Personagens troca;
     
     void Start()
@@ -23,11 +22,23 @@ public class Lobis_Hability : MonoBehaviour
 
     void Hability()
     {
-        Collider2D colisor = Physics2D.OverlapCircle(troca.Personagens_Object.transform.position, 0.1f, destruivel);
+        Collider2D[] colisoes = Physics2D.OverlapCircleAll(troca.Personagens_Object.transform.position, 1f, destruivel);
 
-        if(colisor != null && troca.Lobisomen_Object.activeSelf && Objeto_dest != null)
+        foreach (Collider2D colisor in colisoes)
         {
-            Objeto_dest.SetActive(false);
-        }
+            if (colisor != null && troca.Lobisomen_Object.activeSelf)
+            {
+                colisor.gameObject.SetActive(false);               
+            }
+        }        
     }
+
+    void OnDrawGizmosSelected()
+    {
+        if (troca != null && troca.Personagens_Object != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(troca.Personagens_Object.transform.position, 0.1f);
+        }
+    }  
 }
